@@ -11,7 +11,7 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/cartPath" element={<CheckOut />} />
+        <Route path="/checkOut" element={<CheckOut />} />
       </Routes>
     </div>
   );
