@@ -12,21 +12,12 @@ function Home() {
         />
         <div className="home__row">
           <Product
-            id="23445930"
-            title="Ultimate Ears BOOM 3 Portable Waterproof Bluetooth Speaker - Night Black"
-            price={93.9}
+            id="12321341"
+            title="Learning React: Modern Patterns for Developing React Apps 2nd Edition"
+            price={(37.84).toLocaleString("en-de")}
             rating={5}
-            image="https://images-na.ssl-images-amazon.com/images/I/81p77PcQRbL._AC_SL1500_.jpg"
+            image="https://images-na.ssl-images-amazon.com/images/I/51Kwaw5nInL._SX379_BO1,204,203,200_.jpg"
           />
-          <Product
-            id={5454}
-            title="the lean start up "
-            price={29.99}
-            image="https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_74800375/fee_786_587_png"
-            rating={3}
-          />
-        </div>
-        <div className="home__row">
           <Product
             id="49538094"
             title="Thrustmaster T300 Ferrari Integral Alcantara Edition (Lenkrad inkl. 3-Pedalset, Force Feedback, 270° - 1080°, Eco-System, PS4 / PS3 / PC)"
@@ -34,12 +25,21 @@ function Home() {
             rating={5}
             image="https://images-na.ssl-images-amazon.com/images/I/91HHwbbjGOL._SL1500_.jpg"
           />
+        </div>
+        <div className="home__row">
           <Product
             id="4903850"
             title="Apple Watch Series 5 (GPS + Cellular, 40MM) - Space Black Stainless Steel Case with Black Sport Band (Renewed)"
             price={762.69}
             rating={4}
             image="https://images-na.ssl-images-amazon.com/images/I/71wqARCKtPL._AC_SL1500_.jpg"
+          />
+          <Product
+            id="23445930"
+            title="Ultimate Ears BOOM 3 Portable Waterproof Bluetooth Speaker - Night Black"
+            price={93.9}
+            rating={5}
+            image="https://images-na.ssl-images-amazon.com/images/I/81p77PcQRbL._AC_SL1500_.jpg"
           />
           <Product
             id="3254354345"
