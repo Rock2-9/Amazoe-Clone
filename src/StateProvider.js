@@ -1,10 +1,11 @@
-import React, { createContext, useContext, useRedux } from "react";
-
+import React, { createContext, useReducer, useContext, useRedux } from "react";
+//Prepare the dataLayer
 export const StateContex = createContext();
+//Wrap our app
 export const StateProvider = ({ reducer, initialState, children }) => (
   <StateContex.Provider value={useReducer(reducer, initialState)}>
     {" "}
-    {childer}
+    {children}
   </StateContex.Provider>
 );
 
