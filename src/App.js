@@ -7,12 +7,13 @@ import LoginPage from "./components/LoginPage";
 import { useEffect } from "react";
 import { auth } from "./firebase";
 import { useStateValue } from "./StateProvider";
+import Payment from "./components/Payment";
 
 function App() {
-  const [{}, dispatch] = useStateValue;
+  const [{}, dispatch] = useStateValue();
   useEffect(() => {
     auth.onAuthStateChanged((authUser) => {
-      console.log("the usee is >>,", authUser);
+      console.log("the user is >>,", authUser);
 
       if (authUser) {
         //the user just logged in /the user was logged in
@@ -31,6 +32,7 @@ function App() {
         <Route path="/login" element={<LoginPage />} />
         <Route path="/" element={<Home />} />
         <Route path="/checkOut" element={<CheckOut />} />
+        <Route path="/payment" element={<Payment />} />
       </Routes>
     </div>
   );
