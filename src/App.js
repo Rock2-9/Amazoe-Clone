@@ -2,6 +2,7 @@ import "./App.css";
 import { Routes, Route, Link } from "react-router-dom";
 import Header from "./components/Header";
 import Home from "./components/Home";
+import Orders from "./components/Orders";
 import CheckOut from "./components/CheckOut";
 import LoginPage from "./components/LoginPage";
 import { useEffect } from "react";
@@ -47,6 +48,7 @@ function App() {
             </Elements>
           }
         />
+        <Route path="/orders" element={<Orders />} />
       </Routes>
     </div>
   );
