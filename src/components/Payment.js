@@ -8,6 +8,7 @@ import CurrencyFormat from "react-currency-format";
 import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
 import instance from "../axios";
 import axios from "axios";
+import { db } from "../firebase";
 
 function Payment() {
   const stripe = useStripe();
@@ -48,6 +49,15 @@ function Payment() {
       })
       .then(({ paymentIntent }) => {
         //paymentIntent=payment confirmation
+        db.collection("users")
+          .doc(user?.uid)
+          .collection("orders")
+          .doc(paymentIntent.id)
+          .set({
+            basket: basket,
+            amount: paymentIntent.amount,
+            created: paymentIntent.created,
+          });
 
         setSucceeded(true);
         setError(null);

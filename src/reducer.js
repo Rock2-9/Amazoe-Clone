@@ -4,7 +4,7 @@ export const initialState = {
 };
 //selector
 export const getBasketTotal = (basket) => {
-  basket.reduce((amount, item) => item.price + amount, 0);
+  return basket.reduce((amount, item) => item.price + amount, 0);
 };
 
 const reducer = (state, action) => {
@@ -15,6 +15,13 @@ const reducer = (state, action) => {
         ...state,
         basket: [...state.basket, action.item],
       };
+
+    case "EMPTY_BASKET":
+      return {
+        ...state,
+        basket: [],
+      };
+
     case "REMOVE_FROM_BASKET":
       const index = state.basket.findIndex(
         (basketItem) => basketItem.id === action.id
